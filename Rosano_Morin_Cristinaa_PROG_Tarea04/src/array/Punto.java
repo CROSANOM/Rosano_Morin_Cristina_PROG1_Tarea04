@@ -91,11 +91,12 @@ public class Punto {
 
 		double distancia = 0;
 
-		// calcular el cuadrado de restar la coordenada x del punto 1 y el
+		// calcular el cuadrado de la resta  coordenada x del punto 1 y el
 		// punto2 //
 
 		double resultadoPotenciaX = Math.pow((punto1.getX()) - (punto2.getX()), 2);
-
+		// calcular el cuadrado de la resta  coordenada y del punto 1 y el
+				// punto2 //
 		double resultadoPotenciaY = Math.pow((punto1.getY()) - (punto2.getY()), 2);
 
 		// return le pasamos la distancia que es la raiz cuadrada de la suma de

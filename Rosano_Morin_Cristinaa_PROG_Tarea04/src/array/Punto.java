@@ -63,4 +63,46 @@ public class Punto {
 		return y;
 	}
 
+	/*
+	 * se crea un método toString
+	 */
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Punto [x=" + x + ", y=" + y + "]";
+	}
+
+	// crear metodo distancia
+
+	/**
+	 * 
+	 * @param punto1
+	 *            // un objeto de la clase Punto
+	 * @param punto2
+	 *            // un objeto de la clase Punto
+	 * @return
+	 */
+
+	public static double distancia(Punto punto1, Punto punto2) {
+
+		double distancia = 0;
+
+		// calcular el cuadrado de restar la coordenada x del punto 1 y el
+		// punto2 //
+
+		double resultadoPotenciaX = Math.pow((punto1.getX()) - (punto2.getX()), 2);
+
+		double resultadoPotenciaY = Math.pow((punto1.getY()) - (punto2.getY()), 2);
+
+		// return le pasamos la distancia que es la raiz cuadrada de la suma de
+		// las potencias xy
+		return distancia = Math.sqrt(resultadoPotenciaY + resultadoPotenciaX);
+
+	}
+
 }// f class

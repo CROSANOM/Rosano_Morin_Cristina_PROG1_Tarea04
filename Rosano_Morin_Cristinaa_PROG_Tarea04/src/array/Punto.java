@@ -26,7 +26,9 @@ public class Punto {
 	 */
 	private double x;
 	private double y;
+	
 
+	
 	// constructor por defecto
 	public Punto() {
 

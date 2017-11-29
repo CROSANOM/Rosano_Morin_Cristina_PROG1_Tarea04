@@ -71,16 +71,16 @@ public class Ejercicio1 {
 
 			// se establece la condicion de palabra panvocalica 
 			
-			if (aEncontrada & eEncontrada & iEncontrada & oEncontrada & uEncontrada == true) {
+			if (aEncontrada && eEncontrada && iEncontrada && oEncontrada && uEncontrada == true) {
 
-				System.out.println("La palabra" + palabra + "es panvocalica");
+				System.out.println(" La palabra " + palabra + " es panvocalica");
 				System.out.println("8-D");
 				siCondicion = true; // modificar el valo de siCondicion para poder salir del bucle 
 
 			} else {
 
-				System.out.println("La palabra " + palabra
-						+ "no es panvocalica, por favor introduzca una palabra que contenga todas las vocales, gracias");
+				System.out.println(" La palabra " + palabra
+						+ " no es panvocalica, por favor introduzca una palabra que contenga todas las vocales, gracias");
 
 			}
 

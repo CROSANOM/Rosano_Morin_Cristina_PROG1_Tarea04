@@ -46,7 +46,7 @@ public class Punto {
 	}
 
 	/*
-	 * se crean los metodos get para poder acceder a los atributos
+	 * se crean los métodos get para poder acceder a los atributos
 	 */
 
 	/**

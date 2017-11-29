@@ -66,7 +66,6 @@ public class Punto {
 	/*
 	 * se crea un método toString
 	 */
-
 	/*
 	 * (non-Javadoc)
 	 * 

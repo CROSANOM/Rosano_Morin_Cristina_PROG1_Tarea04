@@ -8,22 +8,37 @@ package array;
 
 public class Triangulo {
 	/**
-	 * atributos de la clase Triangulo
+	 * atributos de la clase Triangulo son de tipo Punto
 	 */
-	private Triangulo verticeA;
-	private Triangulo verticeB;
-	private Triangulo verticeC;
+	private Punto verticeA;
+	private Punto verticeB;
+	private Punto verticeC;
 
 	// constructor por defecto 
-	public Triangulo() {
-		// TODO Auto-generated constructor stub
+	public Triangulo() {	
+		
+	}
+	/**
+	 * Forman parte de la clase Punto asi se indica en el diagrama 
+	 * @param verticeA 
+	 * @param verticeB
+	 * @param verticeC
+	 */
+	
+	public Triangulo(Punto verticeA,Punto verticeB, Punto verticeC){
+		
+		this.verticeA = verticeA;
+		this.verticeB = verticeB;
+		this.verticeC = verticeC;
+		
+		
+		
+		
+	}
+
 
 	
 	
 	
-	
-	
-	
-	}
 
 }// f class

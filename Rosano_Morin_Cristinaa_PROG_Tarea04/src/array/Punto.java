@@ -27,11 +27,26 @@ public class Punto {
 	private double x;
 	private double y;
 	
-	
-	
 	// constructor por defecto 
 	public Punto() {
 		// TODO Auto-generated constructor stub
 	}
 
+	/** constructor con parametros x y 
+	 * 
+	 * @param x
+	 * @param y
+	 */
+	public Punto(double x, double y) {
+		
+		this.x=x;
+		this.y=y;	
+		
+	}
+	
+	// 
+	 
+	
+	
+	
 }// f class

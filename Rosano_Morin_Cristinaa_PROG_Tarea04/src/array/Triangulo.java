@@ -57,4 +57,12 @@ public class Triangulo {
 		return verticeC;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "Triangulo [verticeA=" + verticeA + ", verticeB=" + verticeB + ", verticeC=" + verticeC + "]";
+	}
+
 }// f class

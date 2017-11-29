@@ -35,4 +35,26 @@ public class Triangulo {
 
 	}
 
+	// se crean con ayuda del IDE los get 
+	/**
+	 * @return the verticeA
+	 */
+	protected Punto getVerticeA() {
+		return verticeA;
+	}
+
+	/**
+	 * @return the verticeB
+	 */
+	protected Punto getVerticeB() {
+		return verticeB;
+	}
+
+	/**
+	 * @return the verticeC
+	 */
+	protected Punto getVerticeC() {
+		return verticeC;
+	}
+
 }// f class

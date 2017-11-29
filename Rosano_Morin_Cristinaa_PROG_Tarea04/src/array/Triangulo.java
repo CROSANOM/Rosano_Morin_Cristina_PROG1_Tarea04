@@ -35,7 +35,7 @@ public class Triangulo {
 
 	}
 
-	// se crean con ayuda del IDE los get 
+	// se crean con ayuda del IDE los get
 	/**
 	 * @return the verticeA
 	 */
@@ -57,12 +57,33 @@ public class Triangulo {
 		return verticeC;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc) Usando atajo del IDE - source/ generate. Hacemos uso del
+	 * metodo de get para devolver el valor de xy de cada vertice
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return "Triangulo [verticeA=" + verticeA + ", verticeB=" + verticeB + ", verticeC=" + verticeC + "]";
+		return "Triangulo [verticeA=" + verticeA + " " + verticeA.getX() + verticeA.getY() + "  " + ", verticeB="
+				+ verticeB + verticeB.getX() + verticeB.getY() + ", verticeC=" + verticeC + verticeC.getX()
+				+ verticeC.getY() + "]";
+	}
+
+	// crea un metodo perimetro que devuelve perimetro doibel
+
+	public double perimetro() {
+
+		double resultadoPerimetro = 0;
+
+		double distanciaAB = Punto.distancia(verticeA, verticeB);
+		double distanciaAC = Punto.distancia(verticeA, verticeC);
+		double distanciaCB = Punto.distancia(verticeC, verticeB);
+
+		resultadoPerimetro = distanciaAB + distanciaAC + distanciaCB;
+
+		return resultadoPerimetro;
+
 	}
 
 }// f class

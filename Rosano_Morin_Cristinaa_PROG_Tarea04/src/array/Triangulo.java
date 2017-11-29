@@ -70,8 +70,18 @@ public class Triangulo {
 				+ verticeC.getY() + "]";
 	}
 
-	// crea un metodo perimetro que devuelve perimetro doibel
+	/*
+	 * crea un metodo perimetro que devuelve perimetro:El perímetro de un
+	 * triángulo se halla sumando sus lados. Por lo que deberás hallar los tres
+	 * lados (AB, AC, BC) y sumarlo. Para hallar cada lado puedes recurrir a la
+	 * distancia entre un punto y otro implementada en la clase Punto
+	 * 
+	 */
 
+	/**
+	 * 
+	 * @return perimetro 
+	 */
 	public double perimetro() {
 
 		double resultadoPerimetro = 0;

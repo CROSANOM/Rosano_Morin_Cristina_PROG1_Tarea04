@@ -14,31 +14,25 @@ public class Triangulo {
 	private Punto verticeB;
 	private Punto verticeC;
 
-	// constructor por defecto 
-	public Triangulo() {	
-		
+	// constructor por defecto
+	public Triangulo() {
+
 	}
+
 	/**
-	 * Forman parte de la clase Punto asi se indica en el diagrama 
-	 * @param verticeA 
+	 * Forman parte de la clase Punto asi se indica en el diagrama
+	 * 
+	 * @param verticeA
 	 * @param verticeB
 	 * @param verticeC
 	 */
-	
-	public Triangulo(Punto verticeA,Punto verticeB, Punto verticeC){
-		
+
+	public Triangulo(Punto verticeA, Punto verticeB, Punto verticeC) {
+
 		this.verticeA = verticeA;
 		this.verticeB = verticeB;
 		this.verticeC = verticeC;
-		
-		
-		
-		
+
 	}
-
-
-	
-	
-	
 
 }// f class

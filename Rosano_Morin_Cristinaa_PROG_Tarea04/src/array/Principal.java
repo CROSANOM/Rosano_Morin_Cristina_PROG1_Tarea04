@@ -91,11 +91,33 @@ public class Principal {
 		// Calcular perimetro medio.
 		perimetroMedio = perimetroMedio / miArrayTriangulos.length;
 
+		// Imprime por pantalla la informacion del perimetro medio 
 		System.out.println("El perimetro medio de todos los triangulos es: " + perimetroMedio);
 
-	}
-}
+	
+		/* Cantidad de perimetros mayores y menores, para ello se vuelve a usar mi arrayTriangulos para recorrerla y quedarme con  los perimetros mayores y mayores*/
+		int perimetrosMayores = 0;
+		int perimetrosMenores = 0;
 
-// f main
+		for (int i = 0; i < miArrayTriangulos.length; i++) {
 
-// TODO Auto-generated method stub
+			if (miArrayTriangulos[i].perimetro() >= perimetroMedio) {
+				perimetrosMayores++;
+			} else {
+				perimetrosMenores++;
+			}
+		}
+
+		
+		// 
+		System.out.println("La cantidad de triangulos de perimetro mayor a la media son: " + perimetrosMayores);
+		System.out.println("La cantidad de triangulos de perimetro menor a la media son: " + perimetrosMenores);
+		
+		System.out.println("El triangulo con un perimetro de mayor perimetro es "+ miArrayTriangulos[j].perimetro());
+
+		
+		
+		
+		
+	}// f main 
+}// f class

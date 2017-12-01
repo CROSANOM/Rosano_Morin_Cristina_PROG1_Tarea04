@@ -71,7 +71,7 @@ public class Principal {
 				sumPerimetro += miArrayTriangulos[z].perimetro();
 			}
 
-			/* Calcular el perimetro medio */
+			/* Calcular el perimetro medio*/
 			perimetroMedio = sumPerimetro / miArrayTriangulos.length;
 
 			/*

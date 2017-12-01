@@ -29,8 +29,6 @@ public class Principal {
 										 * (ntriangulos*puntos
 										 */
 
-		int y = 0;// declara de manera global y se inicializa a cero se usa
-
 		/* declaramos e incializamos el array de puntos */
 
 		Punto miArrayPuntos[] = new Punto[puntosTotales];
@@ -99,33 +97,49 @@ public class Principal {
 
 			System.out.println("El perimetro medio de todos los triangulos es: " + perimetroMedio);
 
-//			/*
-//			 * Cantidad de perimetros mayores y menores, para ello se vuelve a
-//			 * usar mi arrayTriangulos para recorrerla y quedarme con los
-//			 * perimetros mayores y mayores. Se declaran dos variables
-//			 * inicializadas a cero que se comparan con perimetro medio
-//			 */
-//			int perimetrosMayores = 0;
-//			int perimetrosMenores = 0;
-//			/* Se recorre con un for la longitud del array */
-//			for (int z = 0; z < miArrayTriangulos.length; z++) {
-//				
-//				/*
-//				 * en cada vuelta de comprueba el perimetro que alberga cada una
-//				 * de las posiciones del array
-//				 */
-//				if (miArrayTriangulos[z].perimetro() >= perimetroMedio) {
-//					perimetrosMayores++;
-//				} else {
-//					perimetrosMenores++;
-//				}
-//			}
-//
-//			//
-//			System.out.println("La cantidad de triangulos de perimetro mayor a la media son: " + perimetrosMayores);
-//			System.out.println("La cantidad de triangulos de perimetro menor a la media son: " + perimetrosMenores);
-//		}
-//		System.out.println("El triangulo con un perimetro de mayor perimetro es " + miArrayTriangulos[y].perimetro());
+			/*
+			 * Comprobar que triangulos tienen perimetros mayores y menores a la
+			 * media, para ello se vuelve a usar mi arrayTriangulos para
+			 * recorrerla y quedarme con los perimetros mayores y mayores. Se
+			 * declaran dos variables inicializadas a cero que se comparan con
+			 * perimetro medio
+			 */
+			int perimetrosMayores = 0;
+			int perimetrosMenores = 0;
+
+			/* Se recorre con un for la longitud del array */
+			for (int z = 0; z < miArrayTriangulos.length; z++) {
+
+				/*
+				 * En cada vuelta de comprueba el perimetro que alberga cada una
+				 * de las posiciones del array y si leo el perimetro albergado
+				 * en la posicion z y es mayor que perimetroMedio, se sumará al
+				 * contador, si es menor se sumará al contador. Se incluye print
+				 * que muestra ejecucion del codigo y muestra el triangulo menor
+				 * e indica la posicion en la que se encuentra
+				 */
+				if (miArrayTriangulos[z].perimetro() >= perimetroMedio) {
+					System.out.println("Imprime los triangulos con perimetro mayor" + miArrayTriangulos[z]);
+					System.out.println("Los triangulos que tienen un perimetro mayor estan en " + z);
+					perimetrosMayores++;
+				} else {
+					System.out.println("Imprime los triangulos con perimetro MENOR" + miArrayTriangulos[z]);
+					System.out.println("Los triangulos que tienen un perimetro MENOR estan en " + z);
+					perimetrosMenores++;
+				}
+			}
+
+			/*
+			 * Muestra la cantidad de triangulos que tiene un perimetro mayor a
+			 * la media
+			 */
+			System.out.println("La cantidad de triangulos de perimetro mayor a la media: " + perimetrosMayores);
+			/*
+			 * Muestra la cantidad de triangulos que tiene un perimetro menor a
+			 * la media
+			 */
+			System.out.println("La cantidad de triangulos de perimetro menor a la media: " + perimetrosMenores);
 		}
+
 	}// f main
 }// f class

@@ -17,6 +17,7 @@ public class Principal {
 	public static void main(String[] args) {
 
 		// solicitamos por teclado del número de triangulos
+
 		System.out.println("Introduce el número de triangulos que necesitas:");
 		int numTriangulosSolicitado = Entrada.entero();
 
@@ -24,9 +25,12 @@ public class Principal {
 		// tenemos en cuenta que un triangulo siempre tiene 3 puntos
 		// para saber el numero total se multiplica numTriangulos * 3
 
-		int NUM_PUNTOS_TRIANGULO = 3; // es una constante porque siempre es 3
-		int puntosTotales = numTriangulosSolicitado * NUM_PUNTOS_TRIANGULO;
-
+		int NUM_PUNTOS_TRIANGULO = 3; /*Constante pq un triangulo 3 puntos*/
+		int puntosTotales = numTriangulosSolicitado
+				* NUM_PUNTOS_TRIANGULO; /*
+										 * Variable que calcula puntos total
+										 * (ntriangulos*puntos
+										 */
 		double xAleatorio1 = 0;
 		double yAleatorio1 = 0;
 		double xAleatorio2 = 0;
@@ -38,31 +42,20 @@ public class Principal {
 
 		Punto miArrayPuntos[] = new Punto[puntosTotales];
 
-		// generamos los puntos aleatorios
+		/*
+		 * rellenamos array con objetos punto de la Clase Punto, aleatorios
+		 * haciendo uso de random, se calculan valores para x, y )
+		 */
 
-		for (int i = 0; i < miArrayPuntos.length; i++) {
 
-			// rellenamos array con objetos punto aleatorios haciendo uso de
-			// random //
 
-			xAleatorio1 = Math.random() * 100;
-			yAleatorio1 = Math.random() * 100;
-
-			xAleatorio2 = Math.random() * 100;
-			yAleatorio2 = Math.random() * 100;
-
-			xAleatorio3 = Math.random() * 100;
-			yAleatorio3 = Math.random() * 100;
-
-			// se instancian tres objetos de la clase Punto que generan los
-			// puntos de manera aleatoria
-
-			Punto miPuntoAleatorio1 = new Punto(xAleatorio1, yAleatorio1);
-			Punto miPuntoAleatorio2 = new Punto(xAleatorio2, yAleatorio2);
-			Punto miPuntoAleatorio3 = new Punto(xAleatorio3, yAleatorio3);
-
+		for (   int i= 0; i < miArrayPuntos.length; i++) {
+			miArrayPuntos[i] = new Punto((double) (Math.random() * 10), (double) (Math.random() * 10));
+			
+			System.out.println("Mi Array de Puntos  en la posicion " + i + " guarda " + miArrayPuntos[i]);;// imprime array de puntos
 		}
-
+		
+	
 		// declara e incializa un array de triangulos
 
 		Triangulo miArrayTriangulos[] = new Triangulo[numTriangulosSolicitado];
@@ -70,6 +63,7 @@ public class Principal {
 		int j = 0;// declara de manera global y se inicializa a cero
 
 		// Leer los vertices para ir generando triangulos y calcular perimetros
+		
 		for (int i = 0; i < numTriangulosSolicitado; i++) {
 
 			// Rellenamos el array triangulos moviendome en puntos para los
@@ -91,11 +85,14 @@ public class Principal {
 		// Calcular perimetro medio.
 		perimetroMedio = perimetroMedio / miArrayTriangulos.length;
 
-		// Imprime por pantalla la informacion del perimetro medio 
+		// Imprime por pantalla la informacion del perimetro medio
 		System.out.println("El perimetro medio de todos los triangulos es: " + perimetroMedio);
 
-	
-		/* Cantidad de perimetros mayores y menores, para ello se vuelve a usar mi arrayTriangulos para recorrerla y quedarme con  los perimetros mayores y mayores*/
+		/*
+		 * Cantidad de perimetros mayores y menores, para ello se vuelve a usar
+		 * mi arrayTriangulos para recorrerla y quedarme con los perimetros
+		 * mayores y mayores
+		 */
 		int perimetrosMayores = 0;
 		int perimetrosMenores = 0;
 
@@ -108,16 +105,11 @@ public class Principal {
 			}
 		}
 
-		
-		// 
+		//
 		System.out.println("La cantidad de triangulos de perimetro mayor a la media son: " + perimetrosMayores);
 		System.out.println("La cantidad de triangulos de perimetro menor a la media son: " + perimetrosMenores);
-		
-		System.out.println("El triangulo con un perimetro de mayor perimetro es "+ miArrayTriangulos[j].perimetro());
 
-		
-		
-		
-		
-	}// f main 
+		System.out.println("El triangulo con un perimetro de mayor perimetro es " + miArrayTriangulos[j].perimetro());
+
+	}// f main
 }// f class

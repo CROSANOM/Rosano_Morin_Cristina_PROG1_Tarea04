@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package array;
 
 import utilidades.Entrada;
@@ -11,9 +9,6 @@ import utilidades.Entrada;
  */
 public class Principal {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 
 		// solicitamos por teclado del número de triangulos
@@ -23,27 +18,22 @@ public class Principal {
 
 		/* Calcular el num total de puntos a usar */
 		int NUM_PUNTOS_TRIANGULO = 3; /* Constante pq un triangulo 3 puntos */
-		int puntosTotales = numTriangulosSolicitado
-				* NUM_PUNTOS_TRIANGULO; /*
-										 * Variable que calcula puntos total
-										 * (ntriangulos*puntos
-										 */
+		int puntosTotales = numTriangulosSolicitado * NUM_PUNTOS_TRIANGULO; // variable
+		int y = 0; // num
+		// total
+		// puntos
 
 		/* declaramos e incializamos el array de puntos */
 
 		Punto miArrayPuntos[] = new Punto[puntosTotales];
 
 		/*
-		 * rellenamos array con objetos punto de la Clase Punto, haciendo uso de
-		 * random, se calculan valores para los atributos (x, y). Se incorpora
-		 * un sout para comprobar que se esta rellenando el array correctamente
+		 * Rellenamos array con objetos punto de la Clase Punto, haciendo uso de
+		 * random, se calculan valores para los atributos (x, y).
 		 */
 
 		for (int i = 0; i < miArrayPuntos.length; i++) {
 			miArrayPuntos[i] = new Punto((double) (Math.random() * 10), (double) (Math.random() * 10));
-
-			System.out.println(
-					" En la posicion " + i + " de mi array de puntos hay la siguiente info: " + miArrayPuntos[i]);
 
 		}
 		/* Primero se declara e inicializa un array de Triangulos */
@@ -59,19 +49,15 @@ public class Principal {
 		 * objetos de la clase Triangulo que alberga información del array de
 		 * puntos, desde la posicion 0 a n posicion saltando de tres en tres,
 		 * para ello aumentamos en 3 el contador
-		 * 
-		 * Se incluye un sout para comprobar que se imprimen los triangulos
 		 */
 
 		for (int i = 0; i < numTriangulosSolicitado; i++) {
 			for (int z = 0; z < miArrayTriangulos.length; z++) {
 				miArrayTriangulos[z] = new Triangulo(miArrayPuntos[i], miArrayPuntos[i + 1], miArrayPuntos[i + 2]);
 				i = i + 3;// Contador de posiciones para el array de puntos.
-				System.out.println("ver si imprime mi Triangulos" + miArrayTriangulos[z]);
 			}
 
 			/* Calcular el perimetro de cada triangulo */
-
 			double sumPerimetro = 0;// calcular sum de todos los perimetros
 			double perimetroMedio = 0;
 
@@ -80,12 +66,10 @@ public class Principal {
 			 * con la suma de perimetros, para ello se invoca al metodo
 			 * perimetro de la clase Triangulo
 			 */
+
 			for (int z = 0; z < miArrayTriangulos.length; z++) {
 				sumPerimetro += miArrayTriangulos[z].perimetro();
-				System.out.println(
-						"Este es el perimetro de triangulo posicion " + z + " " + miArrayTriangulos[z].perimetro());
 			}
-			System.out.println("La suma de los perimetros" + sumPerimetro);
 
 			/* Calcular el perimetro medio */
 			perimetroMedio = sumPerimetro / miArrayTriangulos.length;
@@ -94,7 +78,6 @@ public class Principal {
 			 * Se imprime por pantalla el valor del perimetro medio de todos los
 			 * triangulos
 			 */
-
 			System.out.println("El perimetro medio de todos los triangulos es: " + perimetroMedio);
 
 			/*
@@ -112,20 +95,23 @@ public class Principal {
 
 				/*
 				 * En cada vuelta de comprueba el perimetro que alberga cada una
-				 * de las posiciones del array y si leo el perimetro albergado
-				 * en la posicion z y es mayor que perimetroMedio, se sumará al
-				 * contador, si es menor se sumará al contador. Se incluye print
-				 * que muestra ejecucion del codigo y muestra el triangulo menor
-				 * e indica la posicion en la que se encuentra
+				 * de las posiciones del array y si lee un perimetro albergado
+				 * en la posicion z mayor que el perimetroMedio, aumenta en 1 el
+				 * contador y los mismo ocurre con perimetros menores que
+				 * promedio, aumentan el contador menor.
+				 * 
+				 * Muestra los triangulos de perimetro mayor y menor que la
+				 * media
 				 */
+
 				if (miArrayTriangulos[z].perimetro() >= perimetroMedio) {
-					System.out.println("Imprime los triangulos con perimetro mayor" + miArrayTriangulos[z]);
-					System.out.println("Los triangulos que tienen un perimetro mayor estan en " + z);
 					perimetrosMayores++;
+					System.out.println("El triangulo de mayorPerimetro" + miArrayTriangulos[z].getVerticeA()
+							+ miArrayTriangulos[z].getVerticeB() + miArrayTriangulos[z].getVerticeC());
 				} else {
-					System.out.println("Imprime los triangulos con perimetro MENOR" + miArrayTriangulos[z]);
-					System.out.println("Los triangulos que tienen un perimetro MENOR estan en " + z);
 					perimetrosMenores++;
+					System.out.println("El triangulo de menorPerimetro" + miArrayTriangulos[z].getVerticeA()
+							+ miArrayTriangulos[z].getVerticeB() + miArrayTriangulos[z].getVerticeC());
 				}
 			}
 
